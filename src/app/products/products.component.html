@@ -1,0 +1,38 @@
+<!-- <div class="form-group">                              // manually
+    <label for=""> Product Search </label>
+    <input type="text" class="form-control mb-4" (keyup)="onProductSearch($event)">
+</div> -->
+<div class="form-group">                                 <!--two way data-binding--> 
+    <label for=""> Product Search </label>
+    <input type="text" class="form-control mb-4" 
+    [(ngModel)] ="searchProductName">
+</div>
+
+<p>
+    {{searchProductName}}
+</p>
+<!-- <p [innerHTML]="searchProductName">
+</p> -->
+
+<!-- ------------------------------------------------ -->
+
+<button class="btn btn-primary mb-4 mr-4" [disabled]="isDisable" (click)="getProductStatus()"> Add Product </button>
+<button class="btn btn-primary mb-4 mr-4" [disabled]="noOfProducts === 0" (click)="onProductRemove()"> Remove Product </button>
+
+<p class="alert alert-info mb-4">
+    {{prodcutStatus}}
+</p>
+
+<app-product></app-product>
+<app-product></app-product>
+<!--  <div app-product></div> -->
+<!-- <div class="app-product"></div> -->
+
+
+<!-- Directive
+    >> which gives instruction to the dom
+        Component
+        Attribute Directive
+        Structural Directive >>> * 
+    
+-->

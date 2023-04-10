@@ -1,0 +1,70 @@
+
+<ul class="nav nav-pills mb-4">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link" (click)="onFrameWorkChange($event)" [ngClass]="{active: framework.toLowerCase().trim() === 'angular'}">
+            Angular
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link" (click)="onFrameWorkChange($event)" [ngClass]="{active: framework.toLowerCase().trim() === 'react'}">
+            React 
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link" (click)="onFrameWorkChange($event)" [ngClass]="{active: framework.toLowerCase().trim() === 'vue'}">
+            Vue
+        </a>
+    </li>
+</ul>
+
+<!-- --------------------------------------- -->
+
+<div class="tabs-body" [ngSwitch]="framework.toLowerCase().trim()">
+    <div class="card" *ngSwitchCase="'angular'">
+        <div class="card-body">
+            <p>
+              <strong> Angular </strong>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni, culpa quos voluptate doloribus exercitationem laudantium adipisci ullam incidunt amet animi. Dolores, aliquid deleniti magnam doloremque vitae natus quae repellendus.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'react'">
+        <div class="card-body">
+            <p>
+                <strong> React </strong>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni, culpa quos voluptate doloribus exercitationem laudantium adipisci ullam incidunt amet animi. Dolores, aliquid deleniti magnam doloremque vitae natus quae repellendus.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'vue'">
+        <div class="card-body">
+            <p>
+                <strong> Vue </strong>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni, culpa quos voluptate doloribus exercitationem laudantium adipisci ullam incidunt amet animi. Dolores, aliquid deleniti magnam doloremque vitae natus quae repellendus.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------------------------------------- -->
+<!-- 
+<div class="tabs-body">
+    <div class="card" *ngIf="framework.toLowerCase().trim() === 'angular'">
+        <div class="card-body">
+            <p>
+              <strong> Angular </strong>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni, culpa quos voluptate doloribus exercitationem laudantium adipisci ullam incidunt amet animi. Dolores, aliquid deleniti magnam doloremque vitae natus quae repellendus.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngIf="framework.toLowerCase().trim() === 'react'">
+        <div class="card-body">
+            <p>
+                <strong> React </strong>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni, culpa quos voluptate doloribus exercitationem laudantium adipisci ullam incidunt amet animi. Dolores, aliquid deleniti magnam doloremque vitae natus quae repellendus.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngIf="framework.toLowerCase().trim() === 'vue'">
+        <div class="card-body">
+            <p>
+                <strong> Vue </strong>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni, culpa quos voluptate doloribus exercitationem laudantium adipisci ullam incidunt amet animi. Dolores, aliquid deleniti magnam doloremque vitae natus quae repellendus.
+            </p>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,26 @@
+
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead [ngStyle]="{backgroundColor: 'red'}">
+            <tr>
+                <th>sr. no</th>
+                <th>name</th>
+                <th>population</th>
+                <th>area</th>
+                <th>capital</th>
+                <th>language</th>
+            </tr>
+        </thead>
+        <tbody [ngStyle]="{backgroundColor: 'gold'}">
+            <tr *ngFor="let skill of countryinfo; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{skill.name}}</td>
+                <td>{{skill.population}}</td>
+                <td>{{skill.area}}</td>
+                <td>{{skill.capital}}</td>
+                <td>{{skill.language}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

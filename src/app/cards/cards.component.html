@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-sm-4" *ngFor="let post of postArray"><!-- {{post|json}} -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>
+                    {{post.title}}
+                </h3>
+            </div>
+            <div class="card-body">
+                <p class="m-0">
+                    {{post.body}}
+                </p>
+            </div>
+            <div class="card-footer">
+                <strong>
+                    userId: {{post.userId}}
+                    Id: {{post.id}}
+                </strong>
+            </div>
+        </div>
+    </div>
+</div>
